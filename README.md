@@ -3,7 +3,9 @@
 
 A very simple & limited minesweeper clone created using [Svelte](https://svelte.dev).
 
-Try it out here: (https://sveltesweeper.netlify.com)
+Try it out here: https://sveltesweeper.netlify.com
+
+bundle.js less than 3 KB.
 
 ## Dev
 
