@@ -1,10 +1,10 @@
 import App from './App.svelte';
 
 const app = new App({
-	target: document.body,
-	props: {
-		name: 'Sveltesweeper'
-	}
+  target: document.body,
+  props: {
+    name: 'Sveltesweeper'
+  },
 });
 
 export default app;
