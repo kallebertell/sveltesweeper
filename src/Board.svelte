@@ -2,11 +2,12 @@
   import Cell from "./Cell.svelte";
   import { onMount, afterUpdate } from "svelte";
 
-  export let height, width, mines;
+  export let height, width, mines, startedAt, onBoom, onVictory;
   let cells = [];
+  let ignoreInput = true;
 
   $: {
-    console.log("Reset", height, width, mines);
+    console.log("Reset", startedAt, height, width, mines);
     reset();
   }
 
@@ -18,6 +19,7 @@
     cells = initCells(width, height);
     plantMines(cells, mines);
     updateMineCounts(cells, width, height);
+    ignoreInput = false;
   }
 
   function initCells(width, height) {
@@ -97,6 +99,19 @@
           cell.isRevealed = true;
         }
       });
+      ignoreInput = true;
+      onBoom();
+      return;
+    }
+
+    const revealedCnt = cells.reduce(
+      (acc, c) => acc + (c.isRevealed ? 1 : 0),
+      0
+    );
+
+    if (revealedCnt === cells.length - mines) {
+      ignoreInput = true;
+      onVictory();
       return;
     }
 
@@ -131,6 +146,6 @@
   style="width: {width * 22}px"
   oncontextmenu="return false;">
   {#each cells as cell, index (index)}
-    <Cell {cell} onReveal={reveal} onFlag={flag} />
+    <Cell {cell} onReveal={reveal} onFlag={flag} {ignoreInput} />
   {/each}
 </section>

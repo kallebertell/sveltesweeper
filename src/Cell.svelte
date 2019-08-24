@@ -2,6 +2,7 @@
   export let cell;
   export let onReveal;
   export let onFlag;
+  export let ignoreInput;
 </script>
 
 <style>
@@ -34,12 +35,12 @@
   class="cell {cell.isMine ? 'mine' : ''}
   {cell.isRevealed ? 'revealed' : ''}"
   on:click={e => {
-    onReveal(cell.idx);
+    !ignoreInput && onReveal(cell.idx);
   }}
   on:mousedown={e => {
     e.stopPropagation();
     if (e.button === 2) {
-      onFlag(cell.idx);
+      !ignoreInput && onFlag(cell.idx);
     }
     return false;
   }}>
