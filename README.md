@@ -6,9 +6,9 @@ Try it out here: https://sveltesweeper.netlify.com
 
 bundle.js less than 3 KB.
 
-Made by Makers' Den, [https://makersden.io/]
+Made by Makers' Den, https://makersden.io/
 
-Experience write up [https://makersden.io/blog/svelte-3]
+Experience write up, https://makersden.io/blog/svelte-3
 
 ## Dev
 
