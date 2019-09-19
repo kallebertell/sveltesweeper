@@ -1,4 +1,3 @@
-
 # Sveltesweeper
 
 A very simple & limited minesweeper clone created using [Svelte](https://svelte.dev).
@@ -6,6 +5,10 @@ A very simple & limited minesweeper clone created using [Svelte](https://svelte.
 Try it out here: https://sveltesweeper.netlify.com
 
 bundle.js less than 3 KB.
+
+Made by Makers' Den, [https://makersden.io/]
+
+Experience write up [https://makersden.io/blog/svelte-3]
 
 ## Dev
 
@@ -19,4 +22,4 @@ npm install
 npm run dev
 ```
 
-Navigate to [localhost:5000](http://localhost:5000). 
+Navigate to [localhost:5000](http://localhost:5000).

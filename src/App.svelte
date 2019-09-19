@@ -44,6 +44,10 @@
     color: purple;
     text-align: center;
   }
+  .description {
+    text-align: center;
+  }
+
   .settings {
     text-align: center;
   }
@@ -62,6 +66,11 @@
 
 <div>
   <h1>Sveltesweeper</h1>
+  <p class="description">
+    This is a small Svelte3 demo by
+    <a href="https://makersden.io/">makersden.io</a>, read my write-up
+    <a href="https://makersden.io/blog/svelte-3">here</a>
+  </p>
   <div class="settings">
     <button on:click={() => updateBoard(8, 6, 10)}>easy</button>
     <button on:click={() => updateBoard(14, 20, 60)}>medium</button>
